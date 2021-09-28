@@ -6,7 +6,7 @@ When an object is created by just copying the data of the original object, then 
 By default, C++ performs shallow copy by implicitly creating a copy constructor and an overloaded assignment operator.</br>
 Shallow copy works well when our class is simple i.e. when the variables of the object are not dynamically allocated. If any variable of the original object is dynamically allocated, then the shallow copy will also reference to the same memory location. Therefore, the changes made in one of the objects will be reflected on the other object also.
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/61552413/135148646-a2d54029-74cb-4014-9642-76a8abe424ee.png" height="250"> </p>
+<p align="center"> <img src="https://user-images.githubusercontent.com/61552413/135148646-a2d54029-74cb-4014-9642-76a8abe424ee.png" height="300"> </p>
 
 ### Example
 
