@@ -4,7 +4,7 @@
 
 When an object is created by just copying the data of the original object, then it is called a shallow copy of the object. The data copied includes all the data members of the associated class.</br>
 By default, C++ performs shallow copy by implicitly creating a copy constructor and an overloaded assignment operator.</br>
-Shallow copy works well when our class is simple i.e. when the variables of the object are not dynamically allocated. If any variable of the original object is dynamically allocated, then the shallow copy will also reference to the `same` memory location. Therefore, the changes made in one of the objects will be reflected on the other object also.
+Shallow copy works well when our class is simple i.e. when the variables of the object are not dynamically allocated. If any variable of the original object is dynamically allocated, then the shallow copy will also reference to the <em>`same`</em> memory location. Therefore, the changes made in one of the objects will be reflected on the other object also.
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/61552413/135149241-49f25064-5ff7-4516-95e3-9f942d1d9792.png" height="350"> </p>
 
@@ -94,4 +94,4 @@ Number of contributions: 10
 ## **Deep Copy**
 
 When an object is created by copying the data of the original object along with allocation of memory, then it is called a deep copy of the object. The data copied includes all the data members of the associated class.</br>
-The replica object will have copies of the actual values and would live in distinct memory from the original object. Therefore, the changes made in one of the objects will `not` be reflected on the other object.
+The replica object will have copies of the actual values and would live in distinct memory from the original object. Therefore, the changes made in one of the objects will <em>`not`</em> be reflected on the other object.
