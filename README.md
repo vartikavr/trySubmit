@@ -94,4 +94,4 @@ Number of contributions: 10
 ## **Deep Copy**
 
 When an object is created by copying the data of the original object along with allocation of memory, then it is called a deep copy of the object. The data copied includes all the data members of the associated class.</br>
-The replica object will have copies of the actual values and would live in distinct memory from the original object. Therefore, the changes made in one of the objects will <em>`not`</em> be reflected on the other object.
+The replica object will have copies of the actual values and would live in <em>`distinct`</em> memory from the original object. Therefore, the changes made in one of the objects will not be reflected on the other object.
