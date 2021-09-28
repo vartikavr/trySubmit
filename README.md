@@ -95,3 +95,65 @@ Number of contributions: 10
 
 When an object is created by copying the data of the original object along with allocation of memory, then it is called a deep copy of the object. The data copied includes all the data members of the associated class.</br>
 The replica object will have copies of the actual values and would live in <em>`distinct`</em> memory from the original object. Therefore, the changes made in one of the objects will not be reflected on the other object.
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/61552413/135153615-870061c4-9e15-44f3-9e51-79535e60f2f3.png" height="350"> </p>
+
+### Example
+
+```
+#include<iostream>
+using namespace std;
+
+class Contributor{
+    public:
+        string domain;
+        int batchNo;
+        int *contributions;
+        Contributor(string dName, int batchNo, int count)
+        {
+            domain = dName;
+            this->batchNo = batchNo;
+            contributions = new int;
+            *contributions = count;
+        }
+        //Copy constructor for Deep Copy
+        Contributor(Contributor &obj)
+        {
+            domain = obj.domain;
+            this->batchNo = obj.batchNo;
+            contributions = new int; //creates new heap location
+            *contributions = *(obj.contributions);
+        }
+        void display()
+        {
+            cout<<"Name of domain: "<<domain<<endl;
+            cout<<"Batch number: "<<batchNo<<endl;
+            cout<<"Number of contributions: "<<*contributions<<endl;
+        }
+        void setValue(int count)
+        {
+            *contributions = count;
+        }
+        ~Contributor()
+        {
+            delete contributions;
+        }
+};
+int main()
+{
+    Contributor c1("C/CPP", 1, 5);
+    cout<<"Object c1\n";
+    c1.display();
+    //copy constructor
+    Contributor c2 = c1;
+    cout<<"Object c2\n";
+    c2.display();
+    c1.setValue(10); //change made in object c1
+    cout<<"Object c1\n";
+    c1.display();
+    //change would not be reflected in object c2
+    cout<<"Object c2\n";
+    c2.display();
+    return 0;
+}
+```
