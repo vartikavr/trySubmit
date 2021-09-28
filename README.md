@@ -95,7 +95,7 @@ Number of contributions: 10
 
 When an object is created by copying the data of the original object along with the allocation of memory, then it is called a deep copy of the object. The data copied includes all the data members of the associated class.</br>
 We would have to explicitly define a copy constructor for performing deep copy. It'll assign dynamic memory for the dynamically allocated variables.</br>
-The replica object will have copies of the actual values and would live in <em>`distinct`</em> memory from the original object. Therefore, the changes made in one of the objects will not be reflected on the other object.
+The replica object will have copies of the actual values and would be stored in <em>`distinct`</em> memory from the original object. Therefore, the changes made in one of the objects will not be reflected on the other object.
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/61552413/135153615-870061c4-9e15-44f3-9e51-79535e60f2f3.png" height="350"> </p>
 
