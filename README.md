@@ -6,9 +6,7 @@ When an object is created by just copying the data of the original object, then 
 By default, C++ performs shallow copy by implicitly creating a copy constructor and an overloaded assignment operator.</br>
 Shallow copy works well when our class is simple i.e. when the variables of the object are not dynamically allocated. If any variable of the original object is dynamically allocated, then the shallow copy will also reference to the same memory location. Therefore, the changes made in one of the objects will be reflected on the other object also.
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/61552413/135146799-146f67a4-da4a-4495-b418-532abc5c93f1.png" height="400"> </p>
-
-<!-- ![Shallow Copy](https://user-images.githubusercontent.com/61552413/135146799-146f67a4-da4a-4495-b418-532abc5c93f1.png) -->
+<p align="center"> <img src="https://user-images.githubusercontent.com/61552413/135147936-8e07c66f-271a-4232-88cd-e192b8f842f2.png" height="400"> </p>
 
 ### Example
 
@@ -53,10 +51,11 @@ int main()
     Contributor c2 = c1;
     cout<<"Object c2\n";
     c2.display();
-    c1.setValue(10); //change made in object c1
+    //change made in object c1
+    c1.setValue(10);
     cout<<"Object c1\n";
     c1.display();
-    //change made in c1 would be reflected in c2 also
+    //change would be reflected in object c2 also
     cout<<"Object c2\n";
     c2.display();
     return 0;
