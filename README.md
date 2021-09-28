@@ -16,35 +16,45 @@ class Contributor{
     private:
         string domain;
         int batchNo;
-        int contributions;
+        int *contributions;
     public:
-        void setInfo(string dName, int batchNo, int count)
+        Contributor(string dName, int batchNo, int count)
         {
             domain = dName;
             this->batchNo = batchNo;
-            contributions = count;
+            contributions = new int;
+            *contributions = count;
         }
         void display()
         {
             cout<<"Name of domain: "<<domain<<endl;
             cout<<"Batch number: "<<batchNo<<endl;
-            cout<<"Number of contributions: "<<contributions<<endl;
+            cout<<"Number of contributions: "<<*contributions<<endl;
+        }
+        void setValue(int count)
+        {
+            *contributions = count;
+        }
+        ~Contributor()
+        {
+            delete contributions;
         }
 };
 int main()
 {
-    Contributor c1, c2;
-    c1.setInfo("C/CPP", 1, 5);
-    cout<<"Object c1 \n";
+    Contributor c1("C/CPP", 1, 5);
+    cout<<"Object c1\n";
     c1.display();
-    //assignment operator
-    c2 = c1;
-    cout<<"Object c2 \n";
-    c2.display();
     //copy constructor
-    Contributor c3 = c1;
-    cout<<"Object c3 \n";
-    c3.display();
+    Contributor c2 = c1;
+    cout<<"Object c2\n";
+    c2.display();
+    c1.setValue(10); //change made in object c1
+    cout<<"Object c1\n";
+    c1.display();
+    //change made in c1 would be reflected in c2 also
+    cout<<"Object c2\n";
+    c2.display();
     return 0;
 }
 ```
@@ -60,10 +70,14 @@ Object c2
 Name of domain: C/CPP
 Batch number: 1
 Number of contributions: 5
-Object c3
+Object c1
 Name of domain: C/CPP
 Batch number: 1
-Number of contributions: 5
+Number of contributions: 10
+Object c2
+Name of domain: C/CPP
+Batch number: 1
+Number of contributions: 10
 ```
 
 ### Advantage -
