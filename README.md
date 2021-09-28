@@ -6,14 +6,6 @@ When an object is created by just copying the data of the original object, then 
 By default, C++ performs shallow copy by implicitly creating a copy constructor and an overloaded assignment operator.</br>
 Shallow copy works well when our class is simple i.e. when the variables of the object are not dynamically allocated. If any variable of the original object is dynamically allocated, then the shallow copy will also reference to the same memory location. Therefore, the changes made in one of the objects will be reflected on the other object also.
 
-### Pros -
-
-- Shallow copy is faster and simpler.
-
-### Cons -
-
-- Shallow copy may create ambiguity and dangling pointers due to sharing of same memory location for dynamically allocated variables.
-
 ### Example
 
 ```
@@ -56,3 +48,28 @@ int main()
     return 0;
 }
 ```
+
+### Output
+
+```
+Object c1
+Name of domain: C/CPP
+Batch number: 1
+Number of contributions: 5
+Object c2
+Name of domain: C/CPP
+Batch number: 1
+Number of contributions: 5
+Object c3
+Name of domain: C/CPP
+Batch number: 1
+Number of contributions: 5
+```
+
+### Advantage -
+
+- Shallow copy is faster and simpler.
+
+### Disadvantage -
+
+- Shallow copy may create ambiguity and dangling pointers due to sharing of same memory location for dynamically allocated variables.
