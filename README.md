@@ -3,8 +3,8 @@
 ## **Shallow Copy**
 
 When an object is created by just copying the data of the original object, then it is called a shallow copy of the object. The data copied includes all the data members of the associated class.</br>
-By default, C++ performs shallow copy by implicitly creating a copy constructor and overloaded assignment operator.</br>
-Shallow copy works well when our class is simple i.e. when the variables of the object are not dynamically allocated. If any variable of the original object is dynamically allocated, then the shallow copy will also reference to the same memory location. Therefore, the changes made in one of the objects will be reflected on the other object also.</hr>
+By default, C++ performs shallow copy by implicitly creating a copy constructor and an overloaded assignment operator.</br>
+Shallow copy works well when our class is simple i.e. when the variables of the object are not dynamically allocated. If any variable of the original object is dynamically allocated, then the shallow copy will also reference to the same memory location. Therefore, the changes made in one of the objects will be reflected on the other object also.
 
 ### Pros -
 
