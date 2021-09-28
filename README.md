@@ -89,11 +89,11 @@ Number of contributions: 10
 
 ### Disadvantage
 
-- Shallow copy may create ambiguity and dangling pointers due to sharing of same memory location for dynamically allocated variables.
+- Shallow copy may create ambiguity and dangling pointers due to sharing of the same memory location for dynamically allocated variables.
 
 ## **Deep Copy**
 
-When an object is created by copying the data of the original object along with allocation of memory, then it is called a deep copy of the object. The data copied includes all the data members of the associated class.</br>
+When an object is created by copying the data of the original object along with the allocation of memory, then it is called a deep copy of the object. The data copied includes all the data members of the associated class.</br>
 We would have to explicitly define a copy constructor for performing deep copy. It'll assign dynamic memory for the dynamically allocated variables.</br>
 The replica object will have copies of the actual values and would live in <em>`distinct`</em> memory from the original object. Therefore, the changes made in one of the objects will not be reflected on the other object.
 
@@ -182,7 +182,7 @@ Number of contributions: 5
 
 ### Advantage
 
--
+- A new independent replica can be made without causing any ambiguity.
 
 ### Disadvantage
 
