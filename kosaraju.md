@@ -25,3 +25,5 @@ A strongly connected component of a graph is a component having a path between a
 In <strong>Kosaraju algorithm</strong>, we use DFS two times. In the above example, suppose we want to start from vertex 4 (sink vertex) and then 3 and then {0, 1, 2} (source) but there is no direct way of obtaining such a sequence.
 To obtain this, we do a DFS traversal of graph and store vertices according to their finish times i.e. finish time of 0 vertex will always be greater than finish time of vertex 3 or 4. Therefore, we do DFS traversal and push that vertex when all its corresponding exploration is finished.
 Now, we'll reverse the edges. This would make vertices (0, 1, 2) as sink and (4) as source. If we do a DFS of the reversed graph using sequence of vertices in the stack then, this would now help us segregate different strongly connected components and we could count them.
+
+<strong>Time Complexity :</strong> O(V+E)
