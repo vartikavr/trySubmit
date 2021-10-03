@@ -8,12 +8,12 @@ Given a Directed Graph with V vertices (Numbered from 0 to V-1) and E edges. Fin
 
 ## Example
 
-<em>`Input`</em> : 5 5
-1 0
-0 2
-2 1
-0 3
-3 4
+<em>`Input`</em> : 5 5</br>
+1 0</br>
+0 2</br>
+2 1</br>
+0 3</br>
+3 4</br>
 
 <em>`Output`</em> : 3
 
