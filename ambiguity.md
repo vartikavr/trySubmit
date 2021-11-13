@@ -4,7 +4,7 @@
 
 Hybrid inheritance is followed when we combine more than one different type of inheritance. It is also known as virtual inheritance. Following image shows an example of hybird inheritance. It shows a combination of hierarchial and multiple inheritance.
 
-![GWOC-C_CPP](https://user-images.githubusercontent.com/61552413/141610940-f717c477-5991-4c78-a309-9b59b8ca402b.png)
+<p align="center"> <img src="https://user-images.githubusercontent.com/61552413/141610940-f717c477-5991-4c78-a309-9b59b8ca402b.png" height="350"> </p>
 
 ```
 #include<iostream>
@@ -42,10 +42,12 @@ Here, class B and class C both inherit class A via multiple inheritance. Both cl
 
 ## How to resolve this ambiguity?
 
-1. By using scope resolution operator (::)
+### 1. By using scope resolution operator (::)
+
 The above example uses scope resolution operator to differentiate between the different values of 'a'.
 
-2. By using virtual base class 
+### 2. By using virtual base class
+
 Virtual base class is used in virtual inheritance to avoid multiple occurances of a particular class in a hierarchy. Here, if class A is inherited virtually then, only one copy of its data would be inherited in class B and C. Hence, when virtual base class is used, only one copy will be shared. This can be demonstrated in the below example :
 
 ```
@@ -82,6 +84,7 @@ int main()
 ```
 
 Output:
+
 ```
 The value of 'a' from class A : 10
 ```
