@@ -11,29 +11,29 @@ Hybrid inheritance is followed when we combine more than one different type of i
 using namespace std;
 class A{
     public:
-    int a;
+    int num_a;
 };
 //Hierarchical inheritance
 class B : public A{
     public:
-    int b;
+    int num_b;
 };
 class C : public A{
     public:
-    int c;
+    int num_c;
 };
 //Multiple inheritance
 class D : public B, public C{
     public:
-    int d;
+    int num_d;
 };
 int main()
 {
     D objD;
-    //Error => objD.a = 10; can't access 'a' directly
-    objD.B::a = 10;
-    objD.C::a = 20;
-    objD.b = 20;
+    //Error => objD.num_a = 10; can't access 'num_a' directly
+    objD.B::num_a = 10;
+    objD.C::num_a = 20;
+    objD.num_b = 20;
     return 0;
 }
 ```
@@ -46,7 +46,7 @@ Here, class B and class C both inherit class A via multiple inheritance. Both cl
 
 ### 1. By using scope resolution operator ( : : )
 
-The above example uses a scope resolution operator to differentiate between the different values of 'a'.
+The above example uses a scope resolution operator to differentiate between the different values of 'num_a'.
 
 ### 2. By using virtual base class
 
@@ -57,30 +57,30 @@ A virtual base class is used in virtual inheritance to avoid multiple occurrence
 using namespace std;
 class A{
     public:
-    int a;
+    int num_a;
     A() //constructor
     {
-        a = 10;
+        num_a = 10;
     }
 };
 //using class A as a virtual base class
 class B : virtual public A{
     public:
-    int b;
+    int num_b;
 };
 //using class A as a virtual base class
 class C : virtual public A{
     public:
-    int c;
+    int num_c;
 };
 class D : public B, public C{
     public:
-    int d;
+    int num_d;
 };
 int main()
 {
     D objD;
-    cout<<"The value of 'a' from class A : "<<objD.a;
+    cout<<"The value of 'num_a' from class A : "<<objD.num_a;
     return 0;
 }
 ```
@@ -88,5 +88,5 @@ int main()
 Output:
 
 ```
-The value of 'a' from class A : 10
+The value of 'num_a' from class A : 10
 ```
