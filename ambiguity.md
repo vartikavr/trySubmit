@@ -4,7 +4,7 @@
 
 Hybrid inheritance is followed when we combine more than one different type of inheritance. It is also known as virtual inheritance. Following image shows an example of hybird inheritance. It shows a combination of hierarchial and multiple inheritance.
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/61552413/141612057-62fb19cc-2993-4253-9915-576ef3c6ea47.png" height="350"> </p>
+<p align="center"> <img src="https://user-images.githubusercontent.com/61552413/141612218-e68f2c7f-d3d4-46da-a060-bc50eba9f085.png" height="350"> </p>
 
 ```
 #include<iostream>
