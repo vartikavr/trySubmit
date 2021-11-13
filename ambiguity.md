@@ -42,7 +42,7 @@ Here, class B and class C both inherit class A via multiple inheritance. Both cl
 
 ## How to resolve this ambiguity?
 
-### 1. By using scope resolution operator (::)
+### 1. By using scope resolution operator (: :)
 
 The above example uses scope resolution operator to differentiate between the different values of 'a'.
 
