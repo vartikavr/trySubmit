@@ -13,7 +13,7 @@ class A{
     public:
     int a;
 };
-//Hierarchial inheritance
+//Hierarchical inheritance
 class B : public A{
     public:
     int b;
