@@ -40,7 +40,7 @@ int main()
 
 ## Ambiguity in hybrid inheritance
 
-Here, class B and class C both inherit class A via multiple inheritance. Both class B and class C will have a separate single copy of class A with them. But class D will contain two copies of class A and would hence lead to ambiguity in data. Therefore, when accessing data of class A from an object of class D, we need to specify the path through which that data would be accessed, i.e. either via class B or via class C.
+Here, class B and class C both inherit class A via hierarchical inheritance. Both class B and class C will have a separate single copy of class A with them. But class D will contain two copies of class A and would hence lead to ambiguity in data. Therefore, when accessing data of class A from an object of class D, we need to specify the path through which that data would be accessed, i.e. either via class B or via class C.
 
 ## How to resolve this ambiguity?
 
