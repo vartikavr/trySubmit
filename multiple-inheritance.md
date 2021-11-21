@@ -14,7 +14,7 @@ A real-life example of multiple inheritance could be, class Bat inheriting its p
 
 ## Example
 
-```
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -71,7 +71,7 @@ The constructors of base classes in multiple inheritance are called in the seque
 
 ### Example
 
-```
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -100,7 +100,7 @@ class B
     }
 };
 //Multiple inheritance
-class C: public A, public B
+class C: public B, public A
 {
   public:
   C()
@@ -121,12 +121,12 @@ int main() {
 Output :
 
 ```
-Constructor of Class A
 Constructor of Class B
+Constructor of Class A
 Constructor of Class C
 Destructor of Class C
-Destructor of Class B
 Destructor of Class A
+Destructor of Class B
 ```
 
 ## Disadvantages of multiple inheritance
