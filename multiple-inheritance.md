@@ -11,3 +11,55 @@ The below image demonstrates a simple example of multiple inheritance :
 Here, class D will be regarded as a child class or derived class and classes A, B and C will be regarded as the parent classes or the base classes.
 
 A real life example of multiple inheritance could be, class Bat inheriting its properties and characteristics from classes Mammal and wingedAnimal.
+
+## Example
+
+```
+#include <iostream>
+using namespace std;
+
+class A
+{
+    int a;
+    public:
+    void callA()
+    {
+        cout<<"Inside Class A\n";
+    }
+};
+class B
+{
+    int b;
+    public:
+    void callB()
+    {
+        cout<<"Inside Class B\n";
+    }
+};
+//Multiple inheritance
+class C: public A, public B
+{
+  int c;
+  public:
+  void callC()
+  {
+      cout<<"Inside Class C\n";
+  }
+};
+int main() {
+	C obj;
+	//All the three functions can be accessed via Class C's object
+	obj.callA();
+	obj.callB();
+	obj.callC();
+	return 0;
+}
+```
+
+Output :
+
+```
+Inside Class A
+Inside Class B
+Inside Class C
+```
