@@ -1,3 +1,9 @@
 # Multiple inheritance
 
-Multiple inheritance is a type of inheritance which allows a class to inherit from more than one class. The class that inherits the data will be known as child class or derived class and the classes from which it derives would be the parent classes or the base classes.
+Multiple inheritance is a type of inheritance in which a class can inherit from more than one class. The class that inherits the data will be known as child class or derived class and the classes from which it inherits would be the parent classes or the base classes.
+
+Therefore, in multiple inheritance, the derived class can access the different data members and member functions of its base classes according to the defined access modes. The access modes are defined using access specifiers. There are three access specifiers that can be used in inheritance in C++, they are : private, protected and public.
+
+The below image demonstrates a simple example of multiple inheritance :
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/61552413/142762283-e4deada2-c86b-433a-9e54-8cb05ff99f31.png" height="350"> </p>
