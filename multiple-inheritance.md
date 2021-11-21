@@ -9,3 +9,5 @@ The below image demonstrates a simple example of multiple inheritance :
 <p align="center"> <img src="https://user-images.githubusercontent.com/61552413/142762283-e4deada2-c86b-433a-9e54-8cb05ff99f31.png" height="350"> </p>
 
 Here, class D will be regarded as a child class or derived class and classes A, B and C will be regarded as the parent classes or the base classes.
+
+A real life example of multiple inheritance could be, class Bat inheriting its properties and characteristics from classes Mammal and wingedAnimal.
