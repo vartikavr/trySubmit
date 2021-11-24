@@ -2,7 +2,7 @@
 
 Inheritance is a feature of C++ by which we can derive a new class (derived class) from an already existing class (base class). In this way, the derived class can inherit the data members and member functions of the base class, depending upon the access mode used.
 Object slicing happens when an object of a derived class is assigned to an object of a base class and therefore, some of the additional attributes in the derived class object are "sliced" off. This happens because the data members of the derived class are not present in its corresponding base class.
-Hence, this does not happens when an object of a base class is assigned to an object of a derived class because the data members of a base class are already inherently present in the derived class.
+Hence, this does not happen when an object of a base class is assigned to an object of a derived class because the data members of a base class are already inherently present in the derived class.
 
 ## Example
 
@@ -39,8 +39,7 @@ class GWOC : public GirlScript{
 int main()
 {
 	GWOC obj1(100, 20, 30);
-	//values - contributors(20) and mentors(30) of derived class would be sliced off
-    //when object assigned from obj1 to obj2
+	//values - contributors(20) and mentors(30) of derived class would be sliced off when object assigned from obj1 to obj2
 	GirlScript obj2 = obj1;
 	obj2.participate();
 	cout<<"No. of members = "<<obj2.members<<endl;
@@ -67,7 +66,7 @@ As we know, if we add atleast one pure virtual function to a class, it makes it 
 
 ### 2. Using references or pointers
 
-The above demonstrated behavior of object slicing can be avoided with the help of references or pointers also. References or pointers of any given type take the same amount of memory. Therefores, when references or pointers to the object are passed, no slicing of data members would be seen. Hence, preventing object slicing. Following is the example showing avoidance of object slicing using pointers.
+The above-demonstrated behavior of object slicing can be avoided with the help of references or pointers also. References or pointers of any given type take the same amount of memory. Therefore, when references or pointers to the object are passed, no slicing of data members would be seen. Hence, preventing object slicing. Following is the example showing avoidance of object slicing using pointers.
 
 #### Example
 
@@ -109,8 +108,7 @@ int main() {
 	Vehicle *obj1 = new Vehicle(12000);
 	Car *obj2 = new Car(800000, 125);
 	sliceFunc(obj1);
-	//No object slicing when derived class object obj2
-    //assigned to base class object obj
+	//No object slicing when derived class object obj2 assigned to base class object obj
 	sliceFunc(obj2);
 	return 0;
 }
