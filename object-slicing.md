@@ -1,6 +1,6 @@
 # Object slicing in inheritance
 
-Inheritance is a feature of C++ by which we can derive a new class (derived class) from an already existing class (base class). In this way, the derived class can inherit the data members and member functions of the base class, depending upon the access mode used.
+Inheritance is a feature of C++ by which we can derive a new class (derived class) from an already existing class (base class). In this way, the derived class can inherit the data members and member functions of the base class, depending upon the access mode used. <br/>
 Object slicing happens when an object of a derived class is assigned to an object of a base class and therefore, some of the additional attributes in the derived class object are "sliced" off. This happens because the data members of the derived class are not present in its corresponding base class.
 Hence, this does not happen when an object of a base class is assigned to an object of a derived class because the data members of a base class are already inherently present in the derived class.
 
@@ -39,7 +39,8 @@ class GWOC : public GirlScript{
 int main()
 {
 	GWOC obj1(100, 20, 30);
-	//values - contributors(20) and mentors(30) of derived class would be sliced off when object assigned from obj1 to obj2
+	/*values - contributors(20) and mentors(30) of derived class
+    would be sliced off when object assigned from obj1 to obj2*/
 	GirlScript obj2 = obj1;
 	obj2.participate();
 	cout<<"No. of members = "<<obj2.members<<endl;
