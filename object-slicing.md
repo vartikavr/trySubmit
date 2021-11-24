@@ -39,8 +39,7 @@ class GWOC : public GirlScript{
 int main()
 {
 	GWOC obj1(100, 20, 30);
-	/*values - contributors(20) and mentors(30) of derived class
-    would be sliced off when object assigned from obj1 to obj2*/
+	//values - contributors(20) and mentors(30) of derived class would be sliced off when object assigned from obj1 to obj2
 	GirlScript obj2 = obj1;
 	obj2.participate();
 	cout<<"No. of members = "<<obj2.members<<endl;
@@ -50,7 +49,7 @@ int main()
 }
 ```
 
-Output:
+Output :
 
 ```
 I am a part of GirlScript!
@@ -115,7 +114,7 @@ int main() {
 }
 ```
 
-Output:
+Output :
 
 ```
 I am driving a vehicle of price = Rs. 12000
